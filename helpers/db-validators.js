@@ -1,6 +1,5 @@
 const { Error } = require('mongoose');
-const Role = require('../models/rol');
-const Usuario = require('../models/usuario');
+const {Role, Usuario, Categoria , Producto} = require('../models');
 
 const rolValidator = async( rol = '') => {
 	const rolExist = await Role.findOne({rol});
@@ -23,8 +22,39 @@ const userIdValidator = async(id) => {
     }
 }
 
+const existeCategoriaPorId = async( id ) => {
+
+    // Verificar si el correo existe
+    const existeCategoria = await Categoria.findById(id);
+    if ( !existeCategoria ) {
+        throw new Error(`El id no existe ${ id }`);
+    }
+}
+
+const existeProductoPorId = async( id ) => {
+
+    // Verificar si el correo existe
+    const existeProducto = await Producto.findById(id);
+    if ( !existeProducto ) {
+        throw new Error(`El id no existe ${ id }`);
+    }
+}
+
+const coleccionesPermitidas = ( coleccion = '', colecciones = []) => {
+
+    const incluida = colecciones.includes( coleccion );
+    if ( !incluida ) {
+        throw new Error(`La colección ${ coleccion } no es permitida, ${ colecciones }`);
+    }
+    return true;
+}
+
+
 module.exports = {
   	rolValidator,
 	mailValidator,
-	userIdValidator
+	userIdValidator,
+	existeCategoriaPorId,
+    existeProductoPorId,
+    coleccionesPermitidas
 }

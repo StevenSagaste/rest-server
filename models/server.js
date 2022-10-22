@@ -9,9 +9,20 @@ class Server{
         this.app = express();
         this.port = process.env.PORT;
 
+        this.paths = {
+            auth:       '/api/auth',
+            // buscar:     '/api/buscar',
+            categorias: '/api/categorias',
+            // productos:  '/api/productos',
+            usuarios:   '/api/usuarios',
+            // uploads:    '/api/uploads',
+            productos:   '/api/productos',
 
-        this.ususarioPath = '/api/usuarios';
-        this.authPath = '/api/auth';
+            buscar:   '/api/buscar',
+        }
+
+        // this.ususarioPath = '/api/usuarios';
+        // this.authPath = '/api/auth';
         //db connect
         this.ConnectDB();
         //middelwares
@@ -36,8 +47,11 @@ class Server{
 
     routes(){
 
-        this.app.use(this.ususarioPath, require('../routes/usuarios.js'));
-        this.app.use(this.authPath, require('../routes/auth.js'));
+        this.app.use(this.paths.auth, require('../routes/auth.js'));
+        this.app.use(this.paths.usuarios, require('../routes/usuarios.js'));
+        this.app.use(this.paths.categorias, require('../routes/categorias'));
+        this.app.use(this.paths.productos, require('../routes/productos'));
+        this.app.use(this.paths.buscar, require('../routes/buscar'));
     }
 
     listen(){
