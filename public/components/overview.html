@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="../css/overview.css">
+    <link rel="shortcut icon" href="img/ICON.png" type="image/x-icon">
+    <title>CAFELI | Admin Panel Managment</title>
+</head>
+<div class="container">
+
+    <div class="nav center top">
+        <div class="cafeli center"><img class="cafeli" src="/img/LogInCafeli.png" alt="CAFELI"></div>
+            <nav class="top">
+                <a class="center-i icon">
+                    <img class="icon" src="/img/icons/overview.png" alt="">
+                    Overview
+                </a>
+                <a class="center-i icon">
+                    <img class="icon" src="/img/icons/folder.png" alt="">
+                    Historial
+                </a>
+                <a class="center-i icon">
+                    <img class="icon" src="/img/icons/chart.png" alt="">
+                    Static
+                </a>
+                <a class="logout center-i icon">
+                    <img class="icon" src="/img/icons/login.png" alt="">
+                    Log Out
+                </a>
+            </nav>
+    </div>
+
+    <div class="content-area">
+<!-- PEDIDO ACTUAL -->
+        <div class="order">
+            Pedido Actual
+            <p>Frase motivacional del dia</p>
+        </div>
+<!-- SECCION PEDIDO ACTUAL -->
+        <div class="center-d even"> 
+            <div class="order-on-display">
+                <div class="order-display">
+                    Nombre del Cliente
+                    <p>Hora de pedido</p>
+                </div>
+            </div>
+
+            <div class="actual center even">
+                <div class="center-d even">
+                    <div class="bebida">bebida <br>actual</div>
+                    <img class="arrow-exit" src="/img/icons/arrow-exit.svg" alt="">
+                </div>
+                <!-- TIEMPO ESTIMADO -->
+                <div class="estimated-time center">
+                    <div class="timebar"><div></div></div>
+                    Tiempo estimado de espera
+                </div>
+            </div>
+        </div>
+<!-- DETALLES DEL PEDIDO -->
+        <div>Detalles del pedido:</div>
+<!-- ESPECIFICACIONES -->
+        <div>Especificaiones ></div>
+<!-- COLDA DE PEDIDOS -->
+        <div class="awaiting even">
+            Cola de pedidos
+            <a href="">Ver todos ></a>
+        </div>
+<!-- TABLA DE PEDIDOS -->
+        <div>table</div>
+    </div>
+
+    <div class="user-area center top">
+        <div class="user-photo">
+        </div>
+        <div class="center">
+            <p class="username">Google Username</p>
+            <p class="role">Administrador</p>
+        </div>
+        <span class="divider"></span>
+        <div class="status center">
+            <h1>Status</h1>
+            <div class="on-off center-d">
+                <button class="icon-on center">
+                    <img class="icon" src="/img/icons/turn-off.png" alt="">
+                </button>
+                <div>
+                    <p>ON / OFF</p>
+                    <p class="scheadule">8:00 am - 13:00 pm</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="premium">
+                <div class="premium-items center-d bottom">
+                    <a href="">Upgrade <br> to Premium</a>
+                    <img src="/img/icons/arrow-exit.svg" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</html>
