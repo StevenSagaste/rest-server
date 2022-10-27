@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="img/ICON.png" type="image/x-icon">
+    <script src="scripts/google-handler.js"></script>
     <title>Cafeli | Log In</title>
 
 
@@ -41,13 +42,50 @@
                         data-shape="rectangular"
                         data-logo_alignment="left">
                     </div>
-                    <button id="g_id_signout">Sign Out</button>
+                    <button id="g_id_signout" onclick="myFunction()">Sign Out</button>
                 </div>
             </div>
         </div>
     </div>
 
-<script src="../helpers/google-handlers.js"></script>
+<script>
+    // function handleCredentialResponse(response) {
+
+    //     console.log(window.location.hostname.includes('localhost'))
+
+    //     var url = ( window.location.hostname.includes('localhost') )
+    //             ? 'http://localhost:3030/api/auth/google'
+    //             : 'https://web-server-node.onrender.com/api/auth/google';
+
+    //     const body = { id_token: response.credential }
+    //     fetch(url, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(body)
+    //     })
+    //     .then( r=> r.json() )
+    //     .then( resp =>{
+    //         console.log(resp )
+    //         localStorage.setItem('email', resp.usuario.correo )
+    //     })
+    //     .catch( console.warn )
+    // };
+
+
+    // function myFunction() {
+
+    //     console.log(google.accounts.id)
+    //     google.accounts.id.disableAutoSelect()
+    //     google.accounts.id.revoke(localStorage.getItem('email'), done => {
+    //         console.log('consent revoked');
+    //         localStorage.clear()
+    //         location.reload()
+    //     });
+    // }
+
+</script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 
 </body>
