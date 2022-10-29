@@ -3,6 +3,7 @@ const Producto = require('./producto');
 const Role = require('./rol');
 const Server = require('./server');
 const Usuario = require('./usuario');
+const ChatMensajes = require('./chat-menasajes');
 
 
 
@@ -12,4 +13,5 @@ module.exports = {
     Role,
     Server,
     Usuario,
+    ChatMensajes,
 }
