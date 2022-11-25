@@ -166,7 +166,7 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal
 			});
 
 			//agregar el total al carrito
-			items += '<li id="total">Total : $ '+total+' USD <div id="submitForm"></div></li>'
+			items += '<li id="total">Total : $ '+total+' MX <div id="submitForm"></div></li>'
 			wrapper.html(items)
 			$('.cart').css('left','-500%')
 		}
@@ -218,7 +218,7 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal
 		//eso va a generar un formulario dinamico para paypal
 		//con los productos y sus precios
 		var cart = (JSON.parse(localStorage.getItem('cart')) != null) ? JSON.parse(localStorage.getItem('cart')) : {items : []} ;
-		var statics = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_cart"><input type="hidden" name="upload" value="1"><input type="hidden" name="currency_code" value="USD" /><input type="hidden" name="business" value="'+business_paypal+'">',
+		var statics = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_cart"><input type="hidden" name="upload" value="1"><input type="hidden" name="currency_code" value="MX" /><input type="hidden" name="business" value="'+business_paypal+'">',
 		dinamic = '',
 		wrapper = $('#submitForm')
 
