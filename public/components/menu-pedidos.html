@@ -1,20 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu para ordenar</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/pedidos.css">
+        <title>Menu para ordenar</title>
+    </head>
+    <body>
+        <section>
+            <header>
+                <div>
+                    <h1 class="title">Cafeli Menu Pedidos</h1>
+                    <p>A continuacion se muestran nuestros productos disponibles</p>
+                </div>
+            </header>
+        </section>
     <section>
-        <header></header>
-    </section>
-    <section>
-        <div class="contenido">
-            aqui van las tablas
+        <div class="row">
+
+            <a class="cart-icon">
+                <span id="totalItems">0</span>
+                <ul class="cart"></ul>
+            </a>
+            
+            
+            <div class="productosWrapper large-12 columns">
+                
+            </div>
+            
         </div>
     </section>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="../scripts/pedidos.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <meta charset="UTF-8">
+        <title>CodePen - Shopping cart with pure javascript</title>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css?ver=4.4.2'>
+        <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.css'><link rel="stylesheet" href="./style.css">
+        
+    </head>
+    <body>
+        <!-- partial:index.partial.html -->
+<div class="row">
+
+		<a class="cart-icon">
+			<span id="totalItems">0</span>
+			<ul class="cart"></ul>
+		</a>
+	
+
+		<div class="productosWrapper large-12 columns">
+			
+		</div>
+
+	</div>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js?ver=1.11.2'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/spin.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Ladda/0.9.8/ladda.min.js'></script><script  src="../scripts/pedidos.js"></script>
+
 </body>
 </html>
