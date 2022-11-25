@@ -36,4 +36,4 @@ PedidoSchema.methods.toJSON = function() {
 }
 
 
-module.exports = model( 'Pedido', ProductoSchema );
+module.exports = model( 'Pedido', PedidoSchema );
