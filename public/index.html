@@ -2,19 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu para ordenar</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="img/ICON.png" type="image/x-icon">
+    <script src="scripts/google-handler.js"></script>
+    <title>Cafeli | Log In</title>
+
+
 </head>
 <body>
-    <section>
-        <header></header>
-    </section>
-    <section>
-        <div class="contenido">
-            aqui van las tablas
+
+    <div class="center">
+        <img class="logo" src="/img/LogInCafeli.png" alt="">
+        <div class="top-spacer">
+            <div class="top-part center"> 
+                    <div class="inputs center">
+                        <label for="username"> <input type="text" id="username" placeholder="username" required /></label>
+                        <label for="password"> <input type="password" id="password" placeholder="password" required /></label>
+                    </div>
+                    <div class="inputs">
+                        <button>Log In</button>
+                    </div>
+            </div>
+            <div class="bottom-part center">
+                <div class="center space">
+                    <div id="g_id_onload"
+                        data-client_id="1016818088653-a26i2d3kc99b2dqc4p84gg3a5g4jcu3o.apps.googleusercontent.com"
+                        data-callback="handleCredentialResponse"
+                        data-auto_prompt="false"
+                        data-auto_select="true">
+                    </div>
+
+                    <div class="g_id_signin"
+                        data-type="standard"
+                        data-size="large"
+                        data-theme="outline"
+                        data-text="sign_in_with"
+                        data-shape="rectangular"
+                        data-logo_alignment="left">
+                    </div>
+                    <button id="g_id_signout" onclick="myFunction()">Sign Out</button>
+                </div>
+            </div>
         </div>
-    </section>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    </div>
+
+<script>
+    // function handleCredentialResponse(response) {
+
+    //     console.log(window.location.hostname.includes('localhost'))
+
+    //     var url = ( window.location.hostname.includes('localhost') )
+    //             ? 'http://localhost:3030/api/auth/google'
+    //             : 'https://web-server-node.onrender.com/api/auth/google';
+
+    //     const body = { id_token: response.credential }
+    //     fetch(url, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(body)
+    //     })
+    //     .then( r=> r.json() )
+    //     .then( resp =>{
+    //         console.log(resp )
+    //         localStorage.setItem('email', resp.usuario.correo )
+    //     })
+    //     .catch( console.warn )
+    // };
+
+
+    // function myFunction() {
+
+    //     console.log(google.accounts.id)
+    //     google.accounts.id.disableAutoSelect()
+    //     google.accounts.id.revoke(localStorage.getItem('email'), done => {
+    //         console.log('consent revoked');
+    //         localStorage.clear()
+    //         location.reload()
+    //     });
+    // }
+
+</script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
 </body>
 </html>
