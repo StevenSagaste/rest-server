@@ -22,7 +22,7 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal
 		}
 
 		$('#totalItems').text(items)
-		$('.totalAmount').text('$ '+total+ ' USD')
+		$('.totalAmount').text('$ '+total+ ' MX')
 		
 	}
 
@@ -30,35 +30,35 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal
 		var productos = [
 			{
 				id : 1,
-				img : 'http://libertadproof.com/wp-content/uploads/2016/02/87952_Obv.jpg',
-				name : 'Libertad 5oz',
-				price : 299.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
+				img : 'https://th.bing.com/th/id/R.0d796429c3f8a9dfc0d3c2935a1d0065?rik=oCofRmgB8DulZw&riu=http%3a%2f%2fmocafeusa.com%2fwp-content%2fuploads%2f2017%2f12%2fmocca-frappe.png&ehk=XnagIUziBcHvt9ehsb7AmIxywjr%2fAcAyQf%2bHb9e3l94%3d&risl=&pid=ImgRaw&r=0',
+				name : 'FRAPPE DE MOKA',
+				price : 25.00,
+				desc : 'Frapre de moka con leche',
 				stock : 4
 			},
 			{
 				id : 2,
-				name : 'Libertad 5oz',
-				img : 'http://libertadproof.com/wp-content/uploads/2016/02/87952_Obv.jpg',
-				price : 199.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
+				name : 'EXPRESSO',
+				img : 'https://res.cloudinary.com/dtzcmekrk/image/upload/v1666905399/xb62wgel8atox4bisnwe.png',
+				price : 25.00,
+				desc : 'Expresso de cafe',
 				stock : 2
 			},
 			{
 				id : 3,
-				name : 'Libertad 5oz',
-				img : 'http://libertadproof.com/wp-content/uploads/2016/02/87952_Obv.jpg',
-				price : 99.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
+				name : 'AMERICANO (FRIO-CALIENTE)',
+				img : 'https://www.vips.com.mx/img/2019/platillosdic/bebidas-cafe-americano.png',
+				price : 20.00,
+				desc : 'Cafe tipo americano ( sin leche )',
 				stock : 1
 			},
 			{
 				id : 4,
-				name : 'Libertad 5oz',
-				img : 'http://libertadproof.com/wp-content/uploads/2016/02/87952_Obv.jpg',
-				price : 80.00,
-				desc : 'Libertad 5oz BU 1998 Contains 1 Libertad 5oz BU brilliant uncirculated .999 fine Silver. In capsule The same coin as you see in this picture. We only Ship to the US, and is FREE Shipping Shipping time 5-7 business days via UPS express with tracking and insurance. Payments only via Paypal.',
-				stock : 0
+				name : 'FRAPPE DE VAINILLA',
+				img : 'https://th.bing.com/th/id/R.731cc5126956c828a399249e24faae79?rik=bEwW8lrVr%2fpQJg&riu=http%3a%2f%2fmocafeusa.com%2fwp-content%2fuploads%2f2017%2f12%2fvinilla-frappe.png&ehk=XT7nF4uGCtLYEbeh6i36rQKmpKPsXNWz%2bQx74h%2fc2AU%3d&risl=&pid=ImgRaw&r=0',
+				price : 30.00,
+				desc : 'Frape de cafe sabor vanilla',
+				stock : 13
 			}
 		],
 		wrapper = $('.productosWrapper'),
@@ -71,7 +71,7 @@ business_paypal = ''; // aquí va tu correo electrónico de paypal
 				contenido+= '<div class="coin-wrapper">'
 				contenido+= '		<img src="'+productos[i].img+'" alt="'+productos[i].name+'">'
 				contenido+= '		<span class="large-12 columns product-details">'
-				contenido+= '			<h3>'+productos[i].name+' <span class="price">$ '+productos[i].price+' USD</span></h3>'
+				contenido+= '			<h3>'+productos[i].name+' <span class="price">$ '+productos[i].price+' MX</span></h3>'
 				contenido+= '			<h3>Tenemos: <span class="stock">'+productos[i].stock+'</span></h3>'
 				contenido+= '		</span>'
 				contenido+= '		<a class="large-12 columns btn submit ladda-button prod-'+productos[i].id+'" data-style="slide-right" onclick="app.addtoCart('+productos[i].id+');">Añadir a la canasta</a>'
