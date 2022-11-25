@@ -24,6 +24,7 @@ const PedidoSchema = Schema({
         default: "descripcion"
     },
     timestamp: {
+        type: Date,
         createdAt: new Date()
     }
 });
