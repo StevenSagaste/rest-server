@@ -14,7 +14,6 @@ class Server{
         this.paths = {
             auth:       '/api/auth',
             categorias: '/api/categorias',
-            usuarios:   '/api/usuarios',
             productos:   '/api/productos',
             buscar:   '/api/buscar',
             uploads:   '/api/uploads',
@@ -22,13 +21,10 @@ class Server{
             pedidos: '/api/pedidos'
         }
 
-        // this.ususarioPath = '/api/usuarios';
-        // this.authPath = '/api/auth';
-        //db connect
         this.ConnectDB();
-        //middelwares
+        
         this.middlewares();
-        //routs
+        
         this.routes();
     }
 
@@ -37,15 +33,13 @@ class Server{
     }
 
     middlewares(){
-        //cors
+        
         this.app.use(cors());
 
-        //lectura y parseo del body
         this.app.use( express.json());
-        //public directory
+        
         this.app.use( express.static('public'));
-
-        // fileup 
+ 
         this.app.use(fileUpload({
             useTempFiles : true,
             tempFileDir : '/tmp/',
@@ -56,7 +50,6 @@ class Server{
     routes(){
 
         this.app.use(this.paths.auth, require('../routes/auth'));
-        this.app.use(this.paths.usuarios, require('../routes/usuarios'));
         this.app.use(this.paths.categorias, require('../routes/categorias'));
         this.app.use(this.paths.productos, require('../routes/productos'));
         this.app.use(this.paths.buscar, require('../routes/buscar'));
